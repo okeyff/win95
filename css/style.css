@@ -19,7 +19,7 @@ body {
     border-width: 3px 2px 1px 3px;
     border-color: rgb(224, 221, 221);
     border-style: outset;
-    /* display: none; */
+    display: none; 
 }
 
 .startup-logo {
