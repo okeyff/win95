@@ -9,66 +9,103 @@
 </head>
 
 <body>
-    <script>
-    function calculateDate() {
-        let now = new Date();
-        let hours = now.getHours();
-        let minutes = now.getMinutes();
-        document.getElementById('date').innerHTML = now.getHours() + ":" + (now.getMinutes() < 10 ? '0' : '') + now.getMinutes();
-    }
-</script>
 
-<div class="startup-menu" >
-    <div class="startup-logo">
-        <strong>Windows</strong>95
-    </div>
-    <div class="startup-options">
-        <div class="startup-options_item">
-            <img class="options_item__icon" src="images/folder-programms.ico" alt="">
-            <p class="options_item__text">Programs</p>
-            <span class="options_item__arrow">▸</span>
-        </div>
-        <div class="startup-options_item">
-            <img class="options_item__icon" src="images/folder-mydocs.ico" alt="">
-            <p class="options_item__text">Documents</p>
-            <span class="options_item__arrow">▸</span>
-        </div>
-        <div class="startup-options_item">
-            <img class="options_item__icon" src="images/settings.ico" alt="">
-            <p class="options_item__text">Settings</p>
-            <span class="options_item__arrow">▸</span>
-        </div>
-        <div class="startup-options_item">
-            <img class="options_item__icon" src="images/search-file.ico" alt="">
-            <p class="options_item__text">Find</p>
-            <span class="options_item__arrow">▸</span>
-        </div>
-        <div class="startup-options_item">
-            <img class="options_item__icon" src="images/help-book.ico" alt="">
-            <p class="options_item__text">Help</p>
-        </div>
-        <div class="startup-options_item">
-            <img class="options_item__icon" src="images/app-run.ico" alt="">
-            <p class="options_item__text">Run...</p>
-        </div>
-        <hr>
-        <div class="startup-options_item">
-            <img class="options_item__icon" src="images/shut_down.ico" alt="">
-            <p class="options_item__text">Shut Down...</p>
+    <script>
+        function calculateDate() {
+            let now = new Date();
+            let hours = now.getHours();
+            let minutes = now.getMinutes();
+            document.getElementById('date').innerHTML = now.getHours() + ":" + (now.getMinutes() < 10 ? '0' : '') + now.getMinutes();
+        }
+    </script>
+
+    <div class="desktop">
+        <div class="desktop-icons">
+            <div class="desktop-icons_item">
+                <img src="images/prog/mail.ico" alt="" class="desktop-item__icon">
+                <span class="desktop-icon__text">Mail</span>
+            </div>
+            <div class="desktop-icons_item">
+                <img src="images/prog/notepad.ico" alt="" class="desktop-item__icon">
+                <span class="desktop-icon__text">Notepad</span>
+            </div>
+            <div class="desktop-icons_item">
+                <img src="images/prog/accessibility.ico" alt="" class="desktop-item__icon">
+                <span class="desktop-icon__text">My Projects</span>
+            </div>
+
         </div>
     </div>
-</div>
+
+    <div class="startup-menu">
+        <div class="startup-logo">
+            <strong>Windows</strong>95
+        </div>
+        <div class="startup-options">
+            <div id="start-up-programs" class="startup-options_item" onMouseOver="showSubMenu()"
+                onMouseOut="hideSubMenu()">
+                <img class="options_item__icon" src="images/folder-programms.ico" alt="">
+                <p class="options_item__text">Programs</p>
+                <span class="options_item__arrow">▸</span>
+            </div>
+            <div class="startup-options_item options__disabled">
+                <img class="options_item__icon" src="images/folder-mydocs.ico" alt="">
+                <p class="options_item__text">Documents</p>
+                <span class="options_item__arrow">▸</span>
+            </div>
+            <div class="startup-options_item">
+                <img class="options_item__icon" src="images/settings.ico" alt="">
+                <p class="options_item__text">Settings</p>
+            </div>
+            <div class="startup-options_item options__disabled">
+                <img class="options_item__icon" src="images/search-file.ico" alt="">
+                <p class="options_item__text">Find</p>
+                <span class="options_item__arrow">▸</span>
+            </div>
+            <div class="startup-options_item">
+                <img class="options_item__icon" src="images/help-book.ico" alt="">
+                <p class="options_item__text">Help</p>
+            </div>
+            <div class="startup-options_item options__disabled">
+                <img class="options_item__icon" src="images/app-run.ico" alt="">
+                <p class="options_item__text">Run...</p>
+            </div>
+            <hr>
+            <div class="startup-options_item">
+                <img class="options_item__icon" src="images/shut_down.ico" alt="">
+                <p class="options_item__text">Shut Down...</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="startup-sub-menu" onMouseOver="showSubMenu()" onMouseOut="hideSubMenu()">
+        <div class="sub-menu-options">
+            <div class="sub-menu-item">
+                <img class="sub-menu-icon" src="images/prog/mword.ico" alt="">
+                <span class="sub-menu_text">Microsoft Word</span>
+            </div>
+            <div class="sub-menu-item">
+                <img class="sub-menu-icon" src="images/prog/mail.ico" alt="">
+                <span class="sub-menu_text">Mail</span>
+            </div>
+            <div class="sub-menu-item">
+                <img class="sub-menu-icon" src="images/prog/notepad.ico" alt="">
+                <span class="sub-menu_text">Notepad</span>
+            </div>
+        </div>
+    </div>
 
     <footer class="footer">
         <div class="taskbar">
             <div class="taskbar-start">
-                <button onclick="toggle()" class="taskbar-start_btn open-startup-menu"><img src="images/start-btn.png" class="icon" alt=""> Start</button>
+                <button class="taskbar-start_btn open-startup-menu"><img src="images/start-btn.png" class="icon" alt="">
+                    Start</button>
             </div>
             <span class="taskbar-big-line"></span>
             <span class="taskbar-little-line"></span>
             <div class="taskbar-shortcut">
                 <img src="images/help.png" class="icon open-help" alt="">
-                <img src="images/mail.png" class="icon open-mail" alt="">
+                <img src="images/prog/mail.ico" class="icon open-mail" alt="">
             </div>
             <span class="taskbar-little-line"></span>
             <span class="taskbar-big-line"></span>
@@ -76,7 +113,7 @@
                 <button class="taskbar-tasks_btn">
                     <img src="images/tasks-folder.png" alt="" class="icon">
                     <span class="tasks_btn__title">
-                        Lorem, ipsum dolor.
+                        Welcome, Friend!
                     </span>
                 </button>
             </div>
@@ -84,11 +121,13 @@
             <div class="taskbar-info">
                 <img src="images/taskbar-cable.png" class="icon" alt="">
                 <img src="images/taskbar-sound.png" class="icon" alt="">
-                <span id="date"><script>calculateDate();</script></span>
+                <span id="date">
+                    <script>calculateDate();</script></span>
             </div>
-            
         </div>
     </footer>
+
+
     <script src="js/main.js"></script>
 </body>
 
