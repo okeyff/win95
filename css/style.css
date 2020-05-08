@@ -40,14 +40,93 @@ body {
     background: none;
 }
 
+/*windows*/
 
+.window {
+    background: silver;
+    box-shadow: 1px 1px #000;
+    border-width: 2px 1px 1px 2px;
+    border-color: rgb(224, 221, 221);
+    border-style: outset;
+    left: 100px;
+    bottom: 200px;
+    position: absolute;
+    cursor: default;
+}
 
+.window-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #ffffff;
+    font-weight: bold;
+    background: navy;
+    font-weight: 12px;
+    height: 20px;
+    padding: 1px 2px;
+}
 
+.window-btn {
+    font-weight: bold;
+    border: 1px solid #fff;
+    border-right-color: #424242;
+    border-bottom-color: #424242;
+    background: silver;
+    height: 16px;
+    width: 14px;
+    color: 000;
+    line-height: 2px;
+    margin: 0px 1px;
+}
 
+.window-title_text, .window-title-icon {
+    margin-right: auto;
+}
 
+.window-options {
+    height: 23px;
+    display: flex;
+    align-items: center;
+}
 
+.window-options a {
+    cursor: default;
+    color: #000;
+    text-decoration: none;
+    padding: 1px 5px 1px 5px;
+    border: 1px outset transparent;
+}
 
+.window-options a:hover {
+    border: 1px outset #fff;
+}
 
+.window-options a:first-letter {
+    text-decoration: underline;
+}
+
+.window-area {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 2px 2px 2px;
+    background: #fff;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #404040 #f4f4f4 #f4f4f4 #404040 ;
+}
+
+.row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.row > div {
+    color: #000000;
+}
+
+.control-panel {
+    display: none;
+}
 
 /*startup menu*/
 
@@ -160,8 +239,9 @@ body {
     color: #ffffff;
 }
 
-.sub-menu-icon {
+.window-icon {
     width: 16px;
+    height: 16px;
     margin: 0px 5px 0px 2px;
 }
 
@@ -213,6 +293,7 @@ body {
 
 .taskbar-info {
     padding: 1px 10px;
+    margin-left: auto;
     width: 80px;
     font-size: 14px;
 }
@@ -227,18 +308,7 @@ body {
     margin-left: 2px;
     margin-right: auto;
     padding: 0px 10px;
-}
-
-.taskbar-tasks-active {
-    width: 160px;
-    margin-left: 2px;
-    margin-right: auto;
-    background: url('../images/123.png');
-    box-shadow: -1px -1px #000;
-}
-
-.tasks_btn__title {
-    margin-left: 5px;
+    display: none;
 }
 
 .taskbar-tasks-active>.taskbar-tasks_btn {
@@ -251,6 +321,29 @@ body {
     border-style: solid;
     border-width: 1px;
     border-color: #7c7c7c #fff #fff #7c7c7c;
+}
+
+.taskbar-tasks-active {
+    width: 160px;
+    margin-left: 2px;
+    margin-right: auto;
+    background: url('../images/123.png');
+    box-shadow: -1px -1px #000;
+}
+
+@media screen and (max-width: 480px) {
+    .taskbar-tasks {
+        padding: 2px 5px;
+        height: auto;  
+        width: 100%; 
+    }
+    .taskbar-little-line, .taskbar-shortcut {
+        display: none;
+    }
+}
+
+.tasks_btn__title {
+    margin-left: 5px;
 }
 
 .taskbar-tasks_btn {

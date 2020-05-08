@@ -33,7 +33,109 @@
                 <img src="images/prog/accessibility.ico" alt="" class="desktop-item__icon">
                 <span class="desktop-icon__text">My Projects</span>
             </div>
+            <div class="desktop-icons_item">
+                <img src="images/folder-open.ico" alt="" class="desktop-item__icon">
+                <span class="desktop-icon__text">Folder</span>
+            </div>
+        </div>
 
+        <div class="control-panel window">
+            <div class="window-title">
+                <img class="window-title-icon window-icon" src="images/control-panel.ico" alt="">
+                <span class="window-title_text">Control Panel</span>
+                <button class="window-minimize-btn window-btn">_</button>
+                <button class="window-help-btn window-btn">?</button>
+                <button class="window-close-btn window-btn">X</button>
+            </div>
+            <div class="window-content">
+                <div class="window-options">
+                    <a href="">File</a>
+                    <a href="">Edit</a>
+                    <a href="">View</a>
+                    <a href="">Help</a>
+                </div>
+                <div class="window-area">
+                    <div class="row">
+                        <div class="desktop-icons_item">
+                            <img src="images/prog/hardware.ico" alt="" class="desktop-item__icon">
+                            <span class="desktop-icon__text">Add New Hardware</span>
+                        </div>
+                        <div class="desktop-icons_item">
+                            <img src="images/prog/appwizard.ico" alt="" class="desktop-item__icon">
+                            <span class="desktop-icon__text">Add/Remove Programs</span>
+                        </div>
+                        <div class="desktop-icons_item">
+                            <img src="images/prog/time_and_date.ico" alt="" class="desktop-item__icon">
+                            <span class="desktop-icon__text">Date/Time</span>
+                        </div>
+                        <div class="desktop-icons_item">
+                            <img src="images/prog/display_properties.ico" alt="" class="desktop-item__icon">
+                            <span class="desktop-icon__text">Display</span>
+                        </div>
+                        <div class="desktop-icons_item">
+                            <img src="images/prog/fonts.ico" alt="" class="desktop-item__icon">
+                            <span class="desktop-icon__text">Fonts</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="desktop-icons_item">
+                            <img src="images/prog/internet.ico" alt="" class="desktop-item__icon">
+                            <span class="desktop-icon__text">Internet</span>
+                        </div>
+                        <div class="desktop-icons_item">
+                            <img src="images/prog/joystick.ico" alt="" class="desktop-item__icon">
+                            <span class="desktop-icon__text">Joystick</span>
+                        </div>
+                        <div class="desktop-icons_item">
+                            <img src="images/prog/keyboard.ico" alt="" class="desktop-item__icon">
+                            <span class="desktop-icon__text">Keyboard</span>
+                        </div>
+                        <div class="desktop-icons_item">
+                            <img src="images/prog/modem.ico" alt="" class="desktop-item__icon">
+                            <span class="desktop-icon__text">Modem</span>
+                        </div>
+                        <div class="desktop-icons_item">
+                            <img src="images/prog/mouse.ico" alt="" class="desktop-item__icon">
+                            <span class="desktop-icon__text">Mouse</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="desktop-icons_item">
+                            <img src="images/prog/multimedia.ico" alt="" class="desktop-item__icon">
+                            <span class="desktop-icon__text">Multimedia</span>
+                        </div>
+                        <div class="desktop-icons_item">
+                            <img src="images/prog/network_three_pcs.ico" alt="" class="desktop-item__icon">
+                            <span class="desktop-icon__text">Network</span>
+                        </div>
+                        <div class="desktop-icons_item">
+                            <img src="images/prog/keys.ico" alt="" class="desktop-item__icon">
+                            <span class="desktop-icon__text">Passwords</span>
+                        </div>
+                        <div class="desktop-icons_item">
+                            <img src="images/prog/directory_printer.ico" alt="" class="desktop-item__icon">
+                            <span class="desktop-icon__text">Printers</span>
+                        </div>
+                        <div class="desktop-icons_item">
+                            <img src="images/prog/world.ico" alt="" class="desktop-item__icon">
+                            <span class="desktop-icon__text">Regional Settings</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="desktop-icons_item">
+                            <img src="images/prog/loudspeaker_rays.ico" alt="" class="desktop-item__icon">
+                            <span class="desktop-icon__text">Volume</span>
+                        </div>
+                        <div class="desktop-icons_item">
+                            <img src="images/prog/computer-panel.ico" alt="" class="desktop-item__icon">
+                            <span class="desktop-icon__text">System</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="window-footer">
+
+                </div>
+            </div>
         </div>
     </div>
 
@@ -53,7 +155,7 @@
                 <p class="options_item__text">Documents</p>
                 <span class="options_item__arrow">▸</span>
             </div>
-            <div class="startup-options_item">
+            <div id="control-panel" class="startup-options_item">
                 <img class="options_item__icon" src="images/settings.ico" alt="">
                 <p class="options_item__text">Settings</p>
             </div>
@@ -81,15 +183,15 @@
     <div class="startup-sub-menu" onMouseOver="showSubMenu()" onMouseOut="hideSubMenu()">
         <div class="sub-menu-options">
             <div class="sub-menu-item">
-                <img class="sub-menu-icon" src="images/prog/mword.ico" alt="">
+                <img class="window-icon" src="images/prog/mword.ico" alt="">
                 <span class="sub-menu_text">Microsoft Word</span>
             </div>
             <div class="sub-menu-item">
-                <img class="sub-menu-icon" src="images/prog/mail.ico" alt="">
+                <img class="window-icon" src="images/prog/mail.ico" alt="">
                 <span class="sub-menu_text">Mail</span>
             </div>
             <div class="sub-menu-item">
-                <img class="sub-menu-icon" src="images/prog/notepad.ico" alt="">
+                <img class="window-icon" src="images/prog/notepad.ico" alt="">
                 <span class="sub-menu_text">Notepad</span>
             </div>
         </div>
@@ -104,7 +206,7 @@
             <span class="taskbar-big-line"></span>
             <span class="taskbar-little-line"></span>
             <div class="taskbar-shortcut">
-                <img src="images/help.png" class="icon open-help" alt="">
+                <img src="images/help.ico" class="icon open-help" alt="">
                 <img src="images/prog/mail.ico" class="icon open-mail" alt="">
             </div>
             <span class="taskbar-little-line"></span>
@@ -117,7 +219,7 @@
                     </span>
                 </button>
             </div>
-            <span class="taskbar-big-line"></span>
+
             <div class="taskbar-info">
                 <img src="images/taskbar-cable.png" class="icon" alt="">
                 <img src="images/taskbar-sound.png" class="icon" alt="">
