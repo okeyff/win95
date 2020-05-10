@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'MS Sans Serif';
+    src: url('../fonts/MS\ Sans\ Serif.ttf');
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,19 +11,26 @@
 body {
     background: #008080;
     font-size: 12px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'MS Sans Serif';
+    user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 /*desktop*/
+
 .desktop {
     width: 100%;
     height: 100%;
 }
 
 .desktop-icons {
+    cursor: default;
     display: flex;
     flex-direction: column;
-    cursor: default;
 }
 
 .desktop-item__icon {
@@ -40,27 +52,29 @@ body {
     background: none;
 }
 
+
 /*windows*/
 
 .window {
+    position: absolute;
+    z-index: 9;
+    cursor: default;
     background: silver;
     box-shadow: 1px 1px #000;
     border-width: 2px 1px 1px 2px;
     border-color: rgb(224, 221, 221);
     border-style: outset;
-    left: 100px;
-    bottom: 200px;
-    position: absolute;
-    cursor: default;
 }
 
 .window-title {
+    background: navy;
+    z-index: 10;
+    cursor: move;
     display: flex;
     align-items: center;
     justify-content: space-between;
     color: #ffffff;
     font-weight: bold;
-    background: navy;
     font-weight: 12px;
     height: 20px;
     padding: 1px 2px;
@@ -108,11 +122,18 @@ body {
 .window-area {
     display: flex;
     flex-direction: column;
-    margin: 0px 2px 2px 2px;
+    margin: 0px 3px 3px 2px;
     background: #fff;
     border-width: 2px;
     border-style: solid;
-    border-color: #404040 #f4f4f4 #f4f4f4 #404040 ;
+    border-color: #404040 #f4f4f4 #f4f4f4 #404040;
+}
+
+.window-footer {
+    background: url(../images/status-bar-grip.png) no-repeat right;
+    border: 1px inset #fff;
+    padding: 1px;
+    margin: 3px;
 }
 
 .row {
@@ -120,7 +141,7 @@ body {
     margin-bottom: 10px;
 }
 
-.row > div {
+.row>div {
     color: #000000;
 }
 
@@ -151,12 +172,13 @@ body {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     padding: 10px 1px 160px 1px;
-    font-family: Arial, Helvetica, sans-serif;
     cursor: default;
 }
 
 .startup-logo strong {
     color: silver;
+    letter-spacing: 1px;
+    text-shadow: 0.5px 0px white, 1.5px 0px white;
 }
 
 .startup-options {
@@ -209,18 +231,18 @@ body {
 /*startup sub menu*/
 
 .startup-sub-menu {
+    position: fixed;
+    cursor: default;
     display: none;
     background: silver;
     color: #000;
     width: 130px;
-    position: fixed;
     left: 230px;
     bottom: 300px;
     box-shadow: 1px 1px #000;
     border-width: 2px 2px 1px 3px;
     border-color: rgb(224, 221, 221);
     border-style: outset;
-    cursor: default;
 }
 
 .sub-menu-options {
@@ -262,9 +284,9 @@ body {
 }
 
 .taskbar {
+    cursor: default;
     margin: 0px 5px 0px 2px;
     height: 100%;
-    cursor: default;
 }
 
 .icon {
@@ -279,6 +301,7 @@ body {
 }
 
 .taskbar-start_btn {
+    cursor: pointer;
     text-align: left;
     padding: 2px 5px;
     font-size: 14px;
@@ -288,7 +311,6 @@ body {
     border-style: solid;
     border-width: 2px;
     border-color: #dfdfdf #4b4b4b #4b4b4b #dfdfdf;
-    cursor: pointer;
 }
 
 .taskbar-info {
@@ -334,8 +356,8 @@ body {
 @media screen and (max-width: 480px) {
     .taskbar-tasks {
         padding: 2px 5px;
-        height: auto;  
-        width: 100%; 
+        height: auto;
+        width: 100%;
     }
     .taskbar-little-line, .taskbar-shortcut {
         display: none;

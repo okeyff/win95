@@ -22,6 +22,10 @@
     <div class="desktop">
         <div class="desktop-icons">
             <div class="desktop-icons_item">
+                <img src="images/prog/computer.ico" alt="" class="desktop-item__icon">
+                <span class="desktop-icon__text">My Computer</span>
+            </div>
+            <div class="desktop-icons_item">
                 <img src="images/prog/mail.ico" alt="" class="desktop-item__icon">
                 <span class="desktop-icon__text">Mail</span>
             </div>
@@ -33,10 +37,6 @@
                 <img src="images/prog/accessibility.ico" alt="" class="desktop-item__icon">
                 <span class="desktop-icon__text">My Projects</span>
             </div>
-            <div class="desktop-icons_item">
-                <img src="images/folder-open.ico" alt="" class="desktop-item__icon">
-                <span class="desktop-icon__text">Folder</span>
-            </div>
         </div>
 
         <div class="control-panel window">
@@ -47,6 +47,7 @@
                 <button class="window-help-btn window-btn">?</button>
                 <button class="window-close-btn window-btn">X</button>
             </div>
+
             <div class="window-content">
                 <div class="window-options">
                     <a href="">File</a>
@@ -133,10 +134,11 @@
                     </div>
                 </div>
                 <div class="window-footer">
-
+                    17 object(s)
                 </div>
             </div>
         </div>
+
     </div>
 
     <div class="startup-menu">
@@ -200,14 +202,15 @@
     <footer class="footer">
         <div class="taskbar">
             <div class="taskbar-start">
-                <button class="taskbar-start_btn open-startup-menu"><img src="images/start-btn.png" class="icon" alt="">
+                <button class="taskbar-start_btn open-startup-menu" title="Click here to begin."><img
+                        src="images/start-btn.png" class="icon" alt="">
                     Start</button>
             </div>
             <span class="taskbar-big-line"></span>
             <span class="taskbar-little-line"></span>
             <div class="taskbar-shortcut">
-                <img src="images/help.ico" class="icon open-help" alt="">
-                <img src="images/prog/mail.ico" class="icon open-mail" alt="">
+                <img src="images/help.ico" class="icon open-help" alt="" title="About Me">
+                <img src="images/prog/mail.ico" class="icon open-mail" alt="" title="Send Me E-mail">
             </div>
             <span class="taskbar-little-line"></span>
             <span class="taskbar-big-line"></span>
@@ -221,9 +224,9 @@
             </div>
 
             <div class="taskbar-info">
-                <img src="images/taskbar-cable.png" class="icon" alt="">
-                <img src="images/taskbar-sound.png" class="icon" alt="">
-                <span id="date">
+                <img src="images/taskbar-cable.png" class="icon" alt="" title="USB Connected">
+                <img src="images/taskbar-sound.png" class="icon" alt="" title="Volume: 100%">
+                <span id="date" title="Your local time">
                     <script>calculateDate();</script></span>
             </div>
         </div>
