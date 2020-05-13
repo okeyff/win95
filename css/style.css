@@ -13,6 +13,7 @@ body {
     font-size: 12px;
     font-family: 'MS Sans Serif';
     user-select: none;
+    overflow: hidden;
     -webkit-touch-callout: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
@@ -51,7 +52,6 @@ body {
 .desktop-icon__text {
     background: none;
 }
-
 
 /*windows*/
 
@@ -147,6 +147,11 @@ body {
 
 .control-panel {
     display: none;
+}
+
+.notepad {
+    bottom: 25%;
+    left: 25%;
 }
 
 /*startup menu*/
